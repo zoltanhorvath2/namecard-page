@@ -37,17 +37,15 @@ img {
 
 .list {
   display: grid;
-  padding: 3rem;
   background-color: rgba(42, 38, 38, 0.3);
-  height: 4vh;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   position: fixed;
   width: 100%;
-
 }
 
 .list li {
+  padding: 3rem 0;
   font-size: 1.2rem; 
   text-align: center;
   display: block;
