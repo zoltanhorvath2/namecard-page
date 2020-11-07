@@ -46,7 +46,7 @@ img {
   background-color: rgba(104,104,104,0.4);
   position: fixed;
   width: 100%;
-  height: 150px; /*Why are you gay?*/
+  height: 18vh; 
 }
 
 .nav-list {
@@ -56,8 +56,15 @@ img {
   font-size: 1.2rem;
 }
 
-.nav-list li {
+.nav-list {
   height: 100%;
+}
+
+.nav-list li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list li:hover {
