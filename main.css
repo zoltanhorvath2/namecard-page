@@ -98,6 +98,12 @@ img {
     flex-direction: column;
     align-items: center;
     width: 60%;
+    right: -500px;
+    transition: right .8s cubic-bezier(0.5, 1, 0.5, 1);
+  }
+
+  .change {
+    right: 0;
   }
 
   .burger {
@@ -108,10 +114,6 @@ img {
     height: 100%;
   }
 
-}
-
-.nav-active {
-  transform: translateX(0%);
 }
 
 
