@@ -4,6 +4,7 @@
   --primary: #4E4B61;
   --light: #FFEAEC;
   --dark: #E3817E;
+  --purple: rgba(189, 158, 212, 1);
   --shadow: 0 1px 5px rgba(104,104,104,0.8);
 }
 
@@ -132,9 +133,9 @@ img {
 /* About Me */
 
 .about-me {
-  background: var(--dark);
+  background: var(--purple);
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  color: rgba(255, 255, 255, 0.7); 
+  color: var(--primary); 
 }
