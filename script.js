@@ -8,10 +8,8 @@ menuIcon.addEventListener('click', () => {
   navbar.classList.toggle('change');
 });
 
-// Scrolling on the page
+// Scrolling on the page with smooth scroll
 
-const body = document.querySelector('window');
-const scrollEvent = document.addEventListener('scroll',  (event) => {
-  const scrolled = window.scrollY;
-  
+const scroll = new SmoothScroll('.navbar a[href*="#"]', {
+  speed: 600
 });
