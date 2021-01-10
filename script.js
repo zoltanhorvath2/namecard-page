@@ -12,5 +12,8 @@ menuIcon.addEventListener('click', () => {
 
 const body = document.querySelector('window');
 const scrollEvent = document.addEventListener('scroll',  (event) => {
-  console.log(event);
+  const scrolled = window.scrollY;
+  if (scrolled > 60){
+    console.log(scrolled);
+  }
 });
