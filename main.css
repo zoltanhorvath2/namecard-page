@@ -1,5 +1,11 @@
 /* === GENERAL STYLES === */
 
+:root {
+  --main-black: rgb(25, 25, 35);
+  --main-background: #E9EAEC;
+  --navbar-grey: #CBCCCC;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -26,7 +32,7 @@ body {
   height: 30px;
   position: fixed;
   top: 50px;
-  left: 50px;
+  left: 25px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -37,13 +43,14 @@ body {
 .line {
   width: 100%;
   height: 5px;
-  background-color: black;
+  background-color: var(--main-black);
 }
 
 .nav-links {
+  border: 1px solid grey;
   width: 60vw;
   height: 100vh;
-  background-color: grey;
+  background-color: var(--navbar-grey);
   position: fixed;
   top: 0px;
   left: -60vw;
@@ -67,11 +74,43 @@ body {
 .nav-link {
   text-decoration: none;
   font-size: 1.2rem;
-  color: black;
+  color: var(--main-black);
   letter-spacing: 2px;
 }
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+/* ABOUT ME */
+
+#about-me {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background) center no-repeat;
+  background-size: cover;
+}
+
+/* TECH STACK */
+
+#tech-stack {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background) center no-repeat;
+  background-size: cover;
+}
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background) center no-repeat;
+  background-size: cover;
+}
+
+#contact-me {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background) center no-repeat;
+  background-size: cover;
 }
 
