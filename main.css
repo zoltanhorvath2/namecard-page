@@ -1,215 +1,77 @@
-/* Variables */
-
-:root {
-  --primary: #4E4B61;
-  --light: #FFEAEC;
-  --dark: #E3817E;
-  --purple: rgba(189, 158, 212, 1);
-  --shadow: 0 1px 5px rgba(104,104,104,0.8);
-}
-
-/* Base Styles */
+/* === GENERAL STYLES === */
 
 * {
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: 'Poppins', Helvetica, sans-serif;
-  color: var(--light);
 }
 
 body {
-  background: var(--primary);
-  line-height: 1.4;
-  letter-spacing: 0.1rem;
-  height: 100vh;
+  font-family: "Space Mono", sans-serif;
 }
 
-img {
-  max-width: 100%;
-}
-
-/* Frontpage */
+/* === FRONT PAGE === */
 
 .frontpage-container {
-  background: url('/images/background3.jpg') no-repeat center;
-  background-size: cover;
+  width: 100%;
   height: 100vh;
-  width: 100vw;
-  color: var(--light);
-  display: grid;
-  grid-template-columns: repeat(6, 16.66%);
-  grid-template-rows: 30% 40% 30%;
+  background: url('/images/background1.jpg') center no-repeat;
+  background-size: cover;
 }
 
-/* Navigation */
+/* Navbar mobile */
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(104,104,104,0.4);
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 17vh; 
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  height: 100%;
-  font-size: 1.2rem;
-}
-
-.nav-list li {
-  width: 100%;
-  height: 100%;
-}
-
-.nav-list li a{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-list li:hover {
-  background-color: rgba(104,104,104,0.8);
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: var(--light);
-}
-
-a:hover {
-  height: 100%;
-  width: 100%;
-}
-
-.burger div{
+.hamburger {
   width: 35px;
-  height: 2px;
-  background-color: var(--light);
-  margin: 10px;
-}
-
-.burger {
-  display: none;
+  height: 30px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px){
-  
-  .nav-list {
-    position: absolute;
-    right: 0px;
-    height: 55vh;
-    top: 17vh;
-    background-color: rgba(104,104,104,0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    right: -500px;
-    transition: right .8s cubic-bezier(0.5, 1, 0.5, 1);
-  }
-
-  .change {
-    right: 0;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .nav-list li {
-    height: 100%;
-  }
-
-}
-
-
-/*Header*/
-
-.header {
-  background-color: rgba(72, 77, 109, 0.8);
-  border: 2px solid var(--primary);
-  box-shadow: var(--shadow);
-  margin-top: auto;
-  margin-bottom: auto;
-  grid-area: 2 / 2 / 3 / 5;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+.nav-links {
+  width: 60vw;
+  height: 100vh;
+  background-color: grey;
+  position: fixed;
+  top: 0px;
+  left: -60vw;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-radius: 0 10% 50% 0;
+  transition: left 0.4s ease-in;
 }
 
-.header-title {
-  text-transform: uppercase;
-  font-size: 3rem;
-  text-align: center;
+.change {
+  left: 0vw;
 }
 
-.header-occupation {
-  margin-top: 10px;
+.nav-item {
+  list-style: none;
+  margin: 25px;
 }
 
-/* About Me */
-
-#about-me {
-  background: var(--purple);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  color: var(--primary); 
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  letter-spacing: 2px;
 }
 
-/* Tech Stack */
-
-#tech-stack {
-  background: var(--light);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  color: var(--primary);
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-/* Previous projects */
-
-#prev-projects {
-  background: var(--purple);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  color: var(--primary);
-}
-
-/* Contact me */
-
-#contact-me {
-  background: var(--light);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  color: var(--primary);
-}
-
-/* Footer */
-
-footer {
-  background-color: var(--primary);
-  height: 10vh;
-  width: 100vw;
-  color: var(--light);
-}
-  
