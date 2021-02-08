@@ -51,7 +51,6 @@ body {
 }
 
 .nav-links {
-  border: 1px solid grey;
   width: 60vw;
   height: 100vh;
   background-color: var(--navbar-grey);
@@ -114,6 +113,47 @@ body {
   height: 100vh;
   background: var(--main-background) center no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+      ". . . ."
+      ". html html ."
+      ". css css ."
+      ". js js ."
+      ". git git ."
+      ". node node ."
+  ;
+}
+
+.tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech img {
+  width: 80px;
+}
+
+.html {
+  grid-area: html;
+}
+
+.css {
+  grid-area: css;
+}
+
+.js {
+  grid-area: js;
+}
+
+.node {
+  grid-area: node;
+}
+
+.git {
+  grid-area: git;
 }
 
 /* PROJECTS */
@@ -145,4 +185,52 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
+}
+
+/* MEDIA QUERIES */
+
+/* tablet view */
+
+@media (min-width: 768px) {
+
+  .hamburger {
+    top: 50px;
+    left: 50px;
+  }
+
+  .nav-links {
+    width: 40vw;
+  }
+
+  #tech-stack {
+    grid-template-areas: 
+      ". . . ."
+      ". html css ."
+      ". js node ."
+      ". git . ."
+      ". . . .";
+    gap: 20px;
+  }
+
+}
+
+
+/* desktop view */
+
+@media (min-width: 1024px) {
+
+  #tech-stack {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+      ". . . . ."
+      "html css js git node"
+      ". . . . ."
+    ;
+  }
+
+  .tech img {
+    width: 60%;
+  }
+
 }
