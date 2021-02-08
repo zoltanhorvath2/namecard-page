@@ -220,7 +220,6 @@ footer {
   }
 
   #tech-stack {
-    height: 100vh;
     grid-template-areas: 
       ". txt txt ."
       ". html css ."
@@ -232,6 +231,7 @@ footer {
 
   .txt {
     margin-top: 100px;
+    height: 10vh;
   }
 
 }
@@ -250,11 +250,6 @@ footer {
       "html css js git node"
       ". . . . ."
     ;
-  }
-
-  .tech img {
-    height: 200px;
-    max-width: 200px;
   }
 
   .txt {
