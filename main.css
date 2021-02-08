@@ -137,7 +137,7 @@ body {
 }
 
 .tech img {
-  width: 150px;
+  max-width: 150px;
   height: 150px;
   border: 1px solid var(--vivid);
   padding: 30px;
@@ -253,7 +253,8 @@ footer {
   }
 
   .tech img {
-    width: 60%;
+    height: 200px;
+    max-width: 200px;
   }
 
   .txt {
