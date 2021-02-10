@@ -14,19 +14,8 @@ menuItems.forEach((item) => {
   });
 });
 
-//Navbar visibility on mousemove
 
-// if (window.innerWidth >= 1024) {
-//   const body = document.querySelector('body');
-//   body.addEventListener('mousemove', () => {
-//     navbar.classList.add('change');
-//     setTimeout(() => {
-//       navbar.classList.remove('change');
-//     }, 3000);
-//   });
-// }
-
-// Scrolling on the page with smooth scroll
+// smooth scroll on navbar clicks
 
 const scroll = new SmoothScroll('.navbar a[href*="#"]', {
   speed: 600
