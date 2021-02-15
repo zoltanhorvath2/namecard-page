@@ -111,7 +111,7 @@ body {
 
 #about-me {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background: var(--main-background) center no-repeat;
   background-size: cover;
   display: flex;
@@ -166,6 +166,7 @@ body {
       ". js js ."
       ". git git ."
       ". node node ."
+      ". . . ."
   ;
 }
 
@@ -219,7 +220,47 @@ body {
   height: 100vh;
   background: var(--main-background) center no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.projects-items {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-areas: 
+             "txt txt txt txt"
+             ". . . ."
+             ". game game ."
+             ". site site ."
+             ". . . ."
+             ". . . .";
+  grid-gap: 20px;
+}
+
+.game {
+  grid-area: game;
+  border: 1px solid var(--vivid);
+}
+
+.site {
+  grid-area: site;
+  border: 1px solid var(--vivid);
+}
+
+.project-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+
+
 
 /* CONTACT ME */
 
@@ -284,6 +325,10 @@ footer {
   .image-section {
     width: 30vw;
     height: 100%;
+  }
+
+  #about-me {
+    height: 100vh;
   }
 
 }
